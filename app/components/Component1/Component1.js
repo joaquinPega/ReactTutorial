@@ -21,8 +21,8 @@ export default class Component1 extends Component {
       longitude: LONGITUDE,
       error: null,
       region:{
-        latitude: null,
-        longitude: null,
+        latitude: LATITUDE,
+        longitude: LATITUDE,
         latitudeDelta:  0.0922,
         longitudeDelta:  0.0421
       }
@@ -97,11 +97,11 @@ export default class Component1 extends Component {
        <View style={styles.buttonContainer}>
          <View style={styles.bubble}>
            <Text>Map with Loading</Text>
+           <TextInput
+            style={{height: 40}}
+            placeholder="Search"
+             onChangeText={(text) => this.setState({text})} />
          </View>
-         <TextInput
-          style={{height: 40}}
-          placeholder="Type here to translate!"
-           onChangeText={(text) => this.setState({text})} />
        </View>
      </View>
     );
